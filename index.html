@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ darkMode: window.matchMedia('(prefers-color-scheme: dark)').matches }" x-bind:class="darkMode ? 'dark' : ''" style="scroll-behavior: smooth;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lexaiko | Software Engineer & IoT Innovator</title>
+    <link rel="icon" href="https://github.com/lexaiko.png" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Fira Code', 'sans-serif']
+            },
+            colors: {
+              primary: '#0ea5e9',
+              secondary: '#f43f5e'
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      @keyframes aurora {
+        0%, 100% {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        50% {
+          transform: translate(-50%, -50%) rotate(180deg);
+        }
+      }
+
+      .aurora {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: 80%;
+        background: radial-gradient(circle at 20% 30%, rgba(168, 85, 247, 0.3), transparent 60%),
+                    radial-gradient(circle at 80% 70%, rgba(203, 253, 21, 0.2), transparent 60%),
+                    radial-gradient(circle at 50% 50%, rgba(251, 113, 133, 0.2), transparent 60%);
+        animation: aurora 20s linear infinite;
+        filter: blur(100px);
+        opacity: 0.7;
+        z-index: -50;
+      }
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- AOS Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  
+
+
+
+<nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="./lexaiko.png" class="h-8" alt="Flowbite Logo">
+  </a>
+  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      <!-- Toggle Dark Mode -->
+      <button @click="darkMode = !darkMode" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:cursor-not-allowed disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-background dark:border-input dark:hover:bg-input/50 size-9 relative cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun h-[1.2rem] w-[1.2rem] scale-100 rotate-0 dark:scale-0 dark:-rotate-90 transition-all">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2"></path>
+          <path d="M12 20v2"></path>
+          <path d="m4.93 4.93 1.41 1.41"></path>
+          <path d="m17.66 17.66 1.41 1.41"></path>
+          <path d="M2 12h2"></path>
+          <path d="M20 12h2"></path>
+          <path d="m6.34 17.66-1.41 1.41"></path>
+          <path d="m19.07 4.93-1.41 1.41"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 dark:scale-100 dark:rotate-0 transition-all">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+        </svg>
+        <span class="sr-only">Toggle theme</span>
+      </button>
+      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+  </div>
+  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+    <ul class="flex flex-col space-y-2 md:space-y-0 p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <li class="py-2 px-3">
+        <a href="#" class="block text-fuchsia-600 rounded-sm md:bg-transparent md:fuchsia-600 md:p-0 md:dark:fuchsia-600" aria-current="page">Home</a>
+      </li>
+      <li class="py-2 px-3">
+        <a href="#projects" class="block text-gray-900 rounded-sm hover:fuchsia-600 md:hover:bg-transparent md:hover:text-fuchsia-600 md:p-0 md:dark:hover:text-fuchsia-600 dark:text-white dark:hover:text-fuchsia-600 md:dark:hover:bg-transparent dark:border-gray-700">Projects</a>
+      </li>
+      <li class="py-2 px-3">
+        <a href="#" class="block text-gray-900 rounded-sm hover:fuchsia-600 md:hover:bg-transparent md:hover:text-fuchsia-600 md:p-0 md:dark:hover:text-fuchsia-600 dark:text-white dark:hover:text-fuchsia-600 md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+      </li>
+      <li class="py-2 px-3">
+        <a href="#contacts" class="block text-gray-900 rounded-sm hover:fuchsia-600 md:hover:bg-transparent md:hover:text-fuchsia-600 md:p-0 md:dark:hover:text-fuchsia-600 dark:text-white dark:hover:text-fuchsia-600 md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+  <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+
+    <!-- Hero -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+        <div class="absolute inset-0 -z-10 overflow-hidden"><div class="aurora"></div></div>
+        <img src="./lexaiko.png" data-aos="fade-up" class="h-28 rounded-lg" alt="Lexaiko Logo" />
+        <div data-aos="fade-up" class="flex justify-center items-center min-h-[60px]">
+  <h1 id="typing" class="text-center text-3xl font-bold"></h1>
+</div>
+      <p class="text-xl md:text-2xl mb-4" data-aos="fade-up" data-aos-delay="100">Software Engineer • AI Enthusiast • IoT Developer</p>
+      <p class="text-sm max-w-xl" data-aos="fade-up" data-aos-delay="200">
+        I build smart solutions using modern web technologies, artificial intelligence, and connected hardware. Let’s bring innovation to life.
+      </p>
+        <div class="mt-8" data-aos="fade-up" data-aos-delay="300">
+            <a href="#projects">
+      <button type="button" class="focus:outline-none text-white bg-fuchsia-600 hover:bg-fuchsia-700 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">View Projects</button>
+      </a>
+        </div>
+        <a href="#">
+<button type="button" class="fixed bottom-4 right-4 z-50 focus:outline-none text-white bg-fuchsia-600 hover:bg-fuchsia-700 font-medium rounded-lg text-sm px-2 py-2.5 mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-from-line-icon lucide-arrow-up-from-line"><path d="m18 9-6-6-6 6"/><path d="M12 3v14"/><path d="M5 21h14"/></svg></button>
+</a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 px-6 md:px-16 max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8" data-aos="fade-down">About Me</h2>
+      <p class="text-center text-lg" data-aos="fade-up" data-aos-delay="100">
+        I'm currently pursuing a degree in Software Engineering Technology at Politeknik Negeri Banyuwangi. I specialize in full-stack web development, IoT systems, and machine learning solutions. I love building impactful and real-world projects that combine code, data, and devices.
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-800 px-6">
+      <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">🚀 Featured Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-md" data-aos="zoom-in"> 
+          <h3 class="text-xl font-semibold mb-2">📊 School Financial System</h3>
+          <p class="text-sm mb-3">Laravel-based app to manage student payments and school financial reports.</p>
+          <a href="https://github.com/lexaiko/sistem-keuangan-matahari" class="text-fuchsia-600 font-medium">View Code →</a>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-md" data-aos="zoom-in" data-aos-delay="100">
+          <h3 class="text-xl font-semibold mb-2">🏨 Celcius Villa Website</h3>
+          <p class="text-sm mb-3">Booking and information site for a villa in Banyuwangi using Laravel & Tailwind.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-md" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="text-xl font-semibold mb-2">🧶 Blimbingsari Creative Craft</h3>
+          <p class="text-sm mb-3">Craft product catalog site with category filtering and admin dashboard.</p>
+          <a href="https://bccrafts.com" class="text-fuchsia-600 font-medium">Visit Site →</a>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-md" data-aos="zoom-in" data-aos-delay="300">
+          <h3 class="text-xl font-semibold mb-2">🪄 Stick Magic IoT</h3>
+          <p class="text-sm mb-3">Smart walking stick with fall detection and GPS tracking system.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contacts" class="py-20 px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">📬 Contact Me</h2>
+      <p class="mb-6" data-aos="fade-up" data-aos-delay="100">Feel free to connect for collaboration or freelance opportunities.</p>
+      <div class="flex justify-center gap-6" data-aos="fade-up" data-aos-delay="200">
+        <a href="mailto:ekosusantobagussusanto@gmail.com" class="text-fuchsia-600 font-semibold hover:underline">Email</a>
+        <a href="https://github.com/lexaiko" class="text-fuchsia-600 font-semibold hover:underline">GitHub</a>
+        <a href="https://linkedin.com/in/eko-bagus-susanto" class="text-fuchsia-600 font-semibold hover:underline">LinkedIn</a>
+      </div>
+    </section>
+
+    <footer class="text-center text-xs py-6 bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400">
+      &copy; 2025 Lexaiko. Made with 💻 by Eko Bagus Susanto
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 800,
+        easing: 'ease-in-out'
+      });
+    </script>
+    <script>
+  const texts = [
+    "Hi, I'm Lexaiko ",
+    "Welcome to my Portfolio!",
+    "I love coding smart solutions.",
+    "AI + IoT = Future!"
+  ];
+
+  let i = 0, j = 0, currentText = "", isDeleting = false;
+  const typingSpeed = 100; // kecepatan saat ngetik
+  const deletingSpeed = 40; // kecepatan saat menghapus
+  const target = document.getElementById("typing");
+
+  function type() {
+    if (i < texts.length) {
+      if (!isDeleting && j <= texts[i].length) {
+        currentText = texts[i].substring(0, j++);
+      } else if (isDeleting && j >= 0) {
+        currentText = texts[i].substring(0, j--);
+      }
+
+      target.innerHTML = currentText;
+
+      if (j === texts[i].length) {
+        isDeleting = true;
+        setTimeout(type, 1500); // jeda sebelum hapus
+      } else if (isDeleting && j === 0) {
+        isDeleting = false;
+        i = (i + 1) % texts.length;
+        setTimeout(type, 300); // jeda sebelum ngetik lagi
+      } else {
+        setTimeout(type, isDeleting ? deletingSpeed : typingSpeed);
+      }
+    }
+  }
+
+  type();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  </body>
+</html>
