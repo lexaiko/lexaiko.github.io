@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="scroll-behavior: smooth;">
+<html lang="en" x-data="{ darkMode: window.matchMedia('(prefers-color-scheme: dark)').matches }" x-bind:class="darkMode ? 'dark' : ''" style="scroll-behavior: smooth;">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -87,7 +87,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300" x-data="{ darkMode: window.matchMedia('(prefers-color-scheme: dark)').matches }" x-bind:class="darkMode ? 'dark' : ''">
+  <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
 <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
   <h2 class="sr-only">Main Navigation</h2>
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -220,7 +220,7 @@
     </script>
     <script>
   const texts = [
-    "Hi, I'm Lexaiko | Eko Bagus Susanto",
+    "Hi, I'm Lexaiko | Eko Bagus Susanto ",
     "Welcome to my Portfolio!",
     "I love coding smart solutions.",
     "AI + IoT = Future!"
