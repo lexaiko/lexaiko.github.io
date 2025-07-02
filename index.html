@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" x-data="{ darkMode: window.matchMedia('(prefers-color-scheme: dark)').matches }" x-bind:class="darkMode ? 'dark' : ''" style="scroll-behavior: smooth;">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,11 +15,11 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Eko Bagus Susanto | Software Engineer & IoT Developer">
     <meta name="twitter:description" content="Explore smart projects in web, AI, and IoT by Lexaiko.">
-    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <meta name="twitter:image" content="https://lexaiko.github.io/lexaiko.png">
     <link rel="canonical" href="https://lexaiko.github.io/" />
+    <link href="./output.css" rel="stylesheet">
     <title>Eko Bagus Susanto | Software Engineer, AI Enthusiast & IoT Engineer</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <script type="application/ld+json">
@@ -39,21 +39,6 @@
   }
 }
 </script>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              primary: '#0ea5e9',
-              secondary: '#f43f5e'
-            }
-          }
-        }
-      }
-    </script>
 
     <style>
       @keyframes aurora {
@@ -80,9 +65,6 @@
         z-index: -50;
       }
     </style>
-<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-    <!-- Alpine.js -->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- AOS Animate On Scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
@@ -92,7 +74,7 @@
   <h2 class="sr-only">Main Navigation</h2>
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="./lexaiko.png" class="h-8" alt="Eko Bagus Susanto Logo">
+      <img src="./lexaiko.webp" class="h-8" alt="Eko Bagus Susanto Logo">
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
       <!-- Toggle Dark Mode -->
@@ -144,7 +126,7 @@
         <div class="absolute inset-0 -z-10 overflow-hidden"><div class="aurora"></div></div>
         <img src="./lexaiko.png" data-aos="fade-up" class="h-28 rounded-lg" alt="Lexaiko Logo" />
         <div data-aos="fade-up" class="flex justify-center items-center min-h-[60px]">
-<h1 id="typing" class="text-center text-3xl font-bold">
+<h1 id="typing" aria-label="Hi, I'm Eko Bagus Susanto – Web Developer in Indonesia & IoT Solution Engineer" class="text-center text-3xl font-bold">
   Hi, I'm Eko Bagus Susanto – Web Developer in Indonesia & IoT Solution Engineer
 </h1>
 </div>
@@ -255,7 +237,7 @@
   }
 
   // Tambahkan delay supaya Google bisa baca fallback sebelum diubah JS
-  setTimeout(type, 1000);
+  setTimeout(type, 300);
 </script>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   </body>

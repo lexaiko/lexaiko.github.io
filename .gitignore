@@ -1,0 +1,42 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+out/
+.next/
+.temp/
+.cache/
+
+# Vite cache
+.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS/system files
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.* # .env.local, .env.production, dll
+
+# Editor settings (VS Code, JetBrains, dll)
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Misc
+coverage/         # hasil test coverage
+*.local           # config lokal
+*.log             # semua file log
+*.tgz             # hasil dari npm pack
+package-lock.json # optional, kalau team pake yarn/pnpm
+yarn.lock         # optional, kalau team pake npm/pnpm
+pnpm-lock.yaml    # optional, kalau team pake npm/yarn
