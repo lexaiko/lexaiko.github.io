@@ -4,43 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="iMlmHIf8WnIgEjJrjv8Gh7Is2ovAePMAskYAvmOKQvQ" />
-    <meta name="description" content="Eko Bagus Susanto is a software engineer and IoT developer who builds smart web, AI and IoT projects. Based in Indonesia.">
+    <meta name="description" content="Eko Bagus Susanto is an AI Engineer and Full Stack Developer who builds intelligent web apps, machine learning systems, and IoT solutions. Based in Indonesia.">
     <meta name="author" content="Eko Bagus Susanto">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Eko Bagus Susanto | Software Engineer & IoT Developer">
-    <meta property="og:description" content="Explore projects by Eko: Laravel apps, AI, and IoT systems.">
+    <meta property="og:title" content="Eko Bagus Susanto | AI Engineer & Full Stack Developer">
+    <meta property="og:description" content="Portfolio of Eko Bagus Susanto, showcase of Laravel apps, AI systems, machine learning recommendations, and IoT platforms.">
     <meta property="og:image" content="https://lexaiko.github.io/lexaiko.png">
     <meta property="og:url" content="https://lexaiko.github.io">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Eko Bagus Susanto | Software Engineer & IoT Developer">
-    <meta name="twitter:description" content="Explore smart projects in web, AI, and IoT by Lexaiko.">
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <meta name="twitter:title" content="Eko Bagus Susanto | AI Engineer & Full Stack Developer">
+    <meta name="twitter:description" content="Explore smart projects in Web Dev, AI, and IoT by Eko Bagus Susanto.">
     <meta name="twitter:image" content="https://lexaiko.github.io/lexaiko.png">
     <link rel="canonical" href="https://lexaiko.github.io/" />
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <link href="./output.css" rel="stylesheet">
-    <title>Eko Bagus Susanto | Software Engineer, AI Enthusiast & IoT Engineer</title>
+    <title>Eko Bagus Susanto | AI Engineer & Full Stack Developer</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    
+    <!-- Dark Mode Initial State Script to avoid Flash of Unstyled Content (FOUC) -->
+    <script>
+      if (
+        localStorage.getItem('color-theme') === 'dark' ||
+        (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+    
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Eko Bagus Susanto",
-  "url": "https://lexaiko.github.io",
-  "sameAs": [
-    "https://github.com/lexaiko",
-    "https://linkedin.com/in/eko-bagus-susanto"
-  ],
-  "jobTitle": "Software Engineer",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Freelance"
-  }
-}
-</script>
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Eko Bagus Susanto",
+      "url": "https://lexaiko.github.io",
+      "sameAs": [
+        "https://github.com/lexaiko",
+        "https://linkedin.com/in/eko-bagus-susanto"
+      ],
+      "jobTitle": "AI Engineer & Full Stack Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      }
+    }
+    </script>
 
     <style>
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      
       @keyframes aurora {
         0%, 100% {
           transform: translate(-50%, -50%) rotate(0deg);
@@ -56,142 +77,859 @@
         left: 50%;
         width: 80%;
         height: 80%;
-        background: radial-gradient(circle at 20% 30%, rgba(168, 85, 247, 0.3), transparent 60%),
-                    radial-gradient(circle at 80% 70%, rgba(203, 253, 21, 0.2), transparent 60%),
-                    radial-gradient(circle at 50% 50%, rgba(251, 113, 133, 0.2), transparent 60%);
-        animation: aurora 20s linear infinite;
+        background: radial-gradient(circle at 20% 30%, rgba(217, 70, 239, 0.25), transparent 60%),
+                    radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.2), transparent 60%),
+                    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.15), transparent 60%);
+        animation: aurora 25s linear infinite;
         filter: blur(100px);
-        opacity: 0.7;
+        opacity: 0.8;
         z-index: -50;
+      }
+
+      .project-tab-btn.active-tab {
+        background-color: #d946ef !important;
+        color: #ffffff !important;
+        box-shadow: 0 10px 15px -3px rgba(217, 70, 239, 0.3), 0 4px 6px -4px rgba(217, 70, 239, 0.3) !important;
+        border-color: transparent !important;
       }
     </style>
     <!-- AOS Animate On Scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
-<nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-  <h2 class="sr-only">Main Navigation</h2>
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="./lexaiko.webp" class="h-8" alt="Eko Bagus Susanto Logo">
-  </a>
-  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-      <!-- Toggle Dark Mode -->
-      <button @click="darkMode = !darkMode" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:cursor-not-allowed disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-background dark:border-input dark:hover:bg-input/50 size-9 relative cursor-pointer">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun h-[1.2rem] w-[1.2rem] scale-100 rotate-0 dark:scale-0 dark:-rotate-90 transition-all">
-          <circle cx="12" cy="12" r="4"></circle>
-          <path d="M12 2v2"></path>
-          <path d="M12 20v2"></path>
-          <path d="m4.93 4.93 1.41 1.41"></path>
-          <path d="m17.66 17.66 1.41 1.41"></path>
-          <path d="M2 12h2"></path>
-          <path d="M20 12h2"></path>
-          <path d="m6.34 17.66-1.41 1.41"></path>
-          <path d="m19.07 4.93-1.41 1.41"></path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 dark:scale-100 dark:rotate-0 transition-all">
-          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
-        </svg>
-
-        <span class="sr-only">Toggle theme</span>
-      </button>
-      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
-  </div>
-  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-    <ul class="flex flex-col space-y-2 md:space-y-0 p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-      <li class="py-2 px-3">
-        <a href="#" class="block text-fuchsia-600 rounded-sm md:bg-transparent md:fuchsia-600 md:p-0 md:dark:fuchsia-600" aria-current="page">Home</a>
-      </li>
-      <li class="py-2 px-3">
-        <a href="#projects" class="block text-gray-900 rounded-sm hover:fuchsia-600 md:hover:bg-transparent md:hover:text-fuchsia-600 md:p-0 md:dark:hover:text-fuchsia-600 dark:text-white dark:hover:text-fuchsia-600 md:dark:hover:bg-transparent dark:border-gray-700">Projects</a>
-      </li>
-      <li class="py-2 px-3">
-        <a href="#" class="block text-gray-900 rounded-sm hover:fuchsia-600 md:hover:bg-transparent md:hover:text-fuchsia-600 md:p-0 md:dark:hover:text-fuchsia-600 dark:text-white dark:hover:text-fuchsia-600 md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
-      </li>
-      <li class="py-2 px-3">
-        <a href="#contacts" class="block text-gray-900 rounded-sm hover:fuchsia-600 md:hover:bg-transparent md:hover:text-fuchsia-600 md:p-0 md:dark:hover:text-fuchsia-600 dark:text-white dark:hover:text-fuchsia-600 md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-      </li>
-    </ul>
-  </div>
-  </div>
-</nav>
-    <!-- Hero -->
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-        <div class="absolute inset-0 -z-10 overflow-hidden"><div class="aurora"></div></div>
-        <img src="./lexaiko.webp" data-aos="fade-up" class="h-28 rounded-lg" alt="Lexaiko Logo" />
-        <div data-aos="fade-up" class="flex justify-center items-center min-h-[60px]">
-<h1 id="typing" aria-label="Hi, I'm Eko Bagus Susanto – Web Developer in Indonesia & IoT Solution Engineer" class="text-center text-3xl font-bold">
-  Hi, I'm Eko Bagus Susanto – Web Developer in Indonesia & IoT Solution Engineer
-</h1>
-</div>
-      <p class="text-xl md:text-2xl font-semibold mb-4" data-aos="fade-up" data-aos-delay="100">Software Engineer • AI Enthusiast • IoT Developer</p>
-      <p class="text-sm max-w-xl font-semibold" data-aos="fade-up" data-aos-delay="200">
-        I build smart solutions using modern web technologies, artificial intelligence, and connected hardware. Let’s bring innovation to life.
-      </p>
-        <div class="mt-8" data-aos="fade-up" data-aos-delay="300">
-            <a href="#projects">
-      <button type="button" class="focus:outline-none text-white bg-fuchsia-600 hover:bg-fuchsia-700 font-medium rounded-lg text-sm px-5 py-2.5 mb-2"><span class="font-semibold">View Projects</span></button>
-      </a>
+  <body class="bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-gray-150 transition-colors duration-300 antialiased">
+    <!-- Navbar -->
+    <nav class="bg-white/80 dark:bg-gray-950/80 backdrop-blur-md fixed w-full z-40 top-0 start-0 border-b border-gray-200/50 dark:border-gray-800/50 transition-all duration-300">
+      <h2 class="sr-only">Main Navigation</h2>
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse group">
+          <div class="relative w-8 h-8 rounded-lg overflow-hidden border border-fuchsia-500/30 group-hover:border-fuchsia-500 transition-colors">
+            <img src="./lexaiko.webp" class="w-full h-full object-cover" alt="Eko Bagus Susanto Logo">
+          </div>
+          <span class="font-bold text-lg bg-gradient-to-r from-fuchsia-600 to-violet-500 dark:from-fuchsia-400 dark:to-violet-400 bg-clip-text text-transparent">Eko Bagus S.</span>
+        </a>
+        <div class="flex md:order-2 space-x-2 md:space-x-0 rtl:space-x-reverse items-center">
+          <!-- Toggle Dark Mode -->
+          <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2 w-10 h-10 flex items-center justify-center transition-all cursor-pointer">
+            <!-- Sun Icon (shown in dark mode) -->
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+            </svg>
+            <!-- Moon Icon (shown in light mode) -->
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </button>
+          
+          <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-700" aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+          </button>
         </div>
-        <a href="#">
-<button type="button" class="fixed bottom-4 right-4 z-50 focus:outline-none text-white bg-fuchsia-600 hover:bg-fuchsia-700 font-medium rounded-lg text-sm px-2 py-2.5 mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-from-line-icon lucide-arrow-up-from-line"><path d="m18 9-6-6-6 6"/><path d="M12 3v14"/><path d="M5 21h14"/></svg></button>
-</a>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <ul class="flex flex-col space-y-2 md:space-y-0 p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-900 md:dark:bg-transparent dark:border-gray-800">
+            <li>
+              <a href="#" class="block py-2 px-3 text-fuchsia-600 dark:text-fuchsia-400 hover:text-fuchsia-700 dark:hover:text-fuchsia-300 md:p-0 transition-colors" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="block py-2 px-3 text-gray-700 hover:text-fuchsia-600 dark:text-gray-300 dark:hover:text-fuchsia-400 md:p-0 transition-colors">About</a>
+            </li>
+            <li>
+              <a href="#skills" class="block py-2 px-3 text-gray-700 hover:text-fuchsia-600 dark:text-gray-300 dark:hover:text-fuchsia-400 md:p-0 transition-colors">Skills</a>
+            </li>
+            <li>
+              <a href="#projects" class="block py-2 px-3 text-gray-700 hover:text-fuchsia-600 dark:text-gray-300 dark:hover:text-fuchsia-400 md:p-0 transition-colors">Projects</a>
+            </li>
+            <li>
+              <a href="#experience" class="block py-2 px-3 text-gray-700 hover:text-fuchsia-600 dark:text-gray-300 dark:hover:text-fuchsia-400 md:p-0 transition-colors">Experience</a>
+            </li>
+            <li>
+              <a href="#contacts" class="block py-2 px-3 text-gray-700 hover:text-fuchsia-600 dark:text-gray-300 dark:hover:text-fuchsia-400 md:p-0 transition-colors">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 overflow-hidden">
+      <!-- Background Aurora Glow -->
+      <div class="absolute inset-0 -z-10 overflow-hidden">
+        <div class="aurora"></div>
+      </div>
+      
+      <!-- Profile Picture Container -->
+      <div data-aos="zoom-in" class="relative mb-6">
+        <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-fuchsia-600 to-violet-600 blur-md opacity-45"></div>
+        <img src="./lexaiko.webp" class="relative w-32 h-32 md:w-36 md:h-36 rounded-3xl object-contain p-3 bg-white dark:bg-gray-900 border-2 border-fuchsia-500/20 profile-glow z-10 shadow-xl" alt="Eko Bagus Susanto Logo" />
+      </div>
+
+      <!-- Typing Banner -->
+      <div data-aos="fade-up" data-aos-delay="100" class="flex justify-center items-center min-h-[60px] mb-2">
+        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white flex flex-wrap justify-center items-center">
+          <span id="typing" class="inline-block bg-gradient-to-r from-gray-900 via-fuchsia-600 to-violet-600 dark:from-white dark:via-fuchsia-400 dark:to-violet-400 bg-clip-text text-transparent pb-1 pr-2">Hi, I'm Eko Bagus Susanto</span><span class="cursor-blink text-fuchsia-600 dark:text-fuchsia-400 font-light translate-y-[-2px]">&nbsp;|</span>
+        </h1>
+      </div>
+
+      <p class="text-lg md:text-xl font-medium text-gray-600 dark:text-gray-400 mb-6 max-w-2xl" data-aos="fade-up" data-aos-delay="200">
+        AI Engineer & Full Stack Developer
+      </p>
+
+      <p class="text-sm md:text-base text-gray-500 dark:text-gray-400 max-w-xl mb-8 leading-relaxed font-normal" data-aos="fade-up" data-aos-delay="300">
+        6th-semester Software Engineering Technology student at Politeknik Negeri Banyuwangi. I specialize in building smart web systems, REST APIs, and Machine Learning solutions.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
+        <a href="#projects" class="inline-flex items-center justify-center text-white bg-gradient-to-r from-fuchsia-600 to-violet-600 hover:from-fuchsia-700 hover:to-violet-700 font-semibold rounded-xl text-sm px-6 py-3 shadow-lg shadow-fuchsia-500/20 dark:shadow-fuchsia-500/10 transition-all duration-300 hover:scale-105">
+          🚀 View Projects
+        </a>
+        <a href="mailto:ekosusantobagussusanto@gmail.com" class="inline-flex items-center justify-center text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 font-semibold rounded-xl text-sm px-6 py-3 transition-all duration-300 hover:scale-105">
+          📬 Contact Me
+        </a>
+      </div>
+
+      <!-- Quick Social Icons -->
+      <div class="flex justify-center items-center space-x-6 mt-12 text-gray-400 dark:text-gray-500" data-aos="fade-up" data-aos-delay="500">
+        <a href="https://github.com/lexaiko" target="_blank" rel="noopener noreferrer" class="hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors" title="GitHub">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+        </a>
+        <a href="https://linkedin.com/in/eko-bagus-susanto" target="_blank" rel="noopener noreferrer" class="hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors" title="LinkedIn">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" /></svg>
+        </a>
+        <a href="mailto:ekosusantobagussusanto@gmail.com" class="hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors" title="Email Eko">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        </a>
+        <a href="https://wa.me/6289621284046" target="_blank" rel="noopener noreferrer" class="hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors" title="WhatsApp Eko">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.46h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="py-20 px-6 md:px-16 max-w-5xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-8" data-aos="fade-down">About Me</h2>
-      <p class="text-center text-lg" data-aos="fade-up" data-aos-delay="100">
-        I'm currently pursuing a degree in Software Engineering Technology at Politeknik Negeri Banyuwangi. I specialize in full-stack web development, IoT systems, and machine learning solutions. I love building impactful and real-world projects that combine code, data, and devices.
-      </p>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-800 px-6">
-      <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">🚀 Featured Projects</h2>
-      <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-        <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-md" data-aos="zoom-in"> 
-          <h3 class="text-xl font-semibold mb-2">📊 School Financial System</h3>
-          <p class="text-sm mb-3">Laravel-based app to manage student payments and school financial reports.</p>
-          <a href="https://github.com/lexaiko/sistem-keuangan-matahari" class="text-fuchsia-600 font-medium">View Code →</a>
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 md:px-16 max-w-5xl mx-auto border-t border-gray-100 dark:border-gray-900/50">
+      <h2 class="text-3xl font-extrabold text-center mb-8 text-gray-950 dark:text-white" data-aos="fade-up">
+        About Me
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8 items-start mt-10">
+        <div class="md:col-span-2 space-y-4 text-base md:text-lg text-gray-600 dark:text-gray-400 font-normal leading-relaxed" data-aos="fade-right">
+          <p>
+            Saya adalah mahasiswa semester 6 program studi <strong class="text-fuchsia-600 dark:text-fuchsia-400 font-semibold">D-IV Teknologi Rekayasa Perangkat Lunak</strong> di Politeknik Negeri Banyuwangi yang berfokus pada bidang <strong class="text-fuchsia-600 dark:text-fuchsia-400 font-semibold">Full-Stack Development</strong> dan <strong class="text-fuchsia-600 dark:text-fuchsia-400 font-semibold">Artificial Intelligence</strong>.
+          </p>
+          <p>
+            Berpengalaman dalam mengembangkan aplikasi web modern (Laravel, Next.js), merancang API yang efisien, membangun sistem cerdas berbasis AI/Machine Learning, serta mengintegrasikan solusi IoT. Saya antusias mempelajari teknologi baru dan saat ini aktif mencari peluang <strong class="text-fuchsia-600 dark:text-fuchsia-400 font-semibold">magang (internship)</strong> di bidang software engineering untuk berkontribusi secara nyata.
+          </p>
         </div>
-        <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-md" data-aos="zoom-in" data-aos-delay="100">
-          <h3 class="text-xl font-semibold mb-2">🏨 Celcius Villa Website</h3>
-          <p class="text-sm mb-3">Booking and information site for a villa in Banyuwangi using Laravel & Tailwind.</p>
-        </div>
-        <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-md" data-aos="zoom-in" data-aos-delay="200">
-          <h3 class="text-xl font-semibold mb-2">🧶 Blimbingsari Creative Craft</h3>
-          <p class="text-sm mb-3">Craft product catalog site with category filtering and admin dashboard.</p>
-          <a href="https://bccrafts.com" class="text-fuchsia-600 font-medium">Visit Site →</a>
-        </div>
-        <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-md" data-aos="zoom-in" data-aos-delay="300">
-          <h3 class="text-xl font-semibold mb-2">🪄 Stick Magic IoT</h3>
-          <p class="text-sm mb-3">Smart walking stick with fall detection and GPS tracking system.</p>
+        
+        <div class="glass-card p-6 rounded-2xl border border-gray-200/50 dark:border-gray-800/50" data-aos="fade-left">
+          <h3 class="font-bold text-lg mb-4 text-gray-900 dark:text-white flex items-center gap-2">
+            <span>💡</span> Fast Facts
+          </h3>
+          <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+            <li class="flex items-center gap-2">
+              <span class="text-fuchsia-500 font-bold">📍</span> Banyuwangi, Indonesia
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-fuchsia-500 font-bold">🎓</span> 6th Sem, TRPL Poliwangi
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-fuchsia-500 font-bold">💼</span> Seeking Internship
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-fuchsia-500 font-bold">🚀</span> Freelance Developer
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contacts" class="py-20 px-6 text-center">
-      <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">📬 Contact Me</h2>
-      <p class="mb-6" data-aos="fade-up" data-aos-delay="100">Feel free to connect for collaboration or freelance opportunities.</p>
-      <div class="flex justify-center gap-6" data-aos="fade-up" data-aos-delay="200">
-        <a href="mailto:ekosusantobagussusanto@gmail.com" class="text-fuchsia-600 font-semibold hover:underline" title="Contact my Email">Email</a>
-        <a href="https://github.com/lexaiko" class="text-fuchsia-600 font-semibold hover:underline" title="Visit my GitHub">GitHub</a>
-        <a href="https://linkedin.com/in/eko-bagus-susanto" class="text-fuchsia-600 font-semibold hover:underline" title="Visit my LinkedIn">LinkedIn</a>
+    <!-- Technical Skills Section -->
+    <section id="skills" class="py-24 bg-gray-100/50 dark:bg-gray-900/40 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-extrabold text-center mb-4 text-gray-950 dark:text-white" data-aos="fade-up">
+          🛠️ Technical Expertise
+        </h2>
+        <p class="text-center text-gray-500 dark:text-gray-400 mb-12 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          A breakdown of my software engineering capabilities and technologies I use daily.
+        </p>
+        
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Programming Languages -->
+          <div class="glass-card p-6 rounded-2xl" data-aos="zoom-in">
+            <div class="w-12 h-12 bg-fuchsia-100 dark:bg-fuchsia-950/50 rounded-xl flex items-center justify-center text-xl mb-4 text-fuchsia-600 dark:text-fuchsia-400 font-bold">
+              💻
+            </div>
+            <h3 class="font-bold text-lg mb-3 text-gray-900 dark:text-white">Languages</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Python</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">PHP</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">JavaScript</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Dart</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">SQL</span>
+            </div>
+          </div>
+
+          <!-- Frameworks & Web -->
+          <div class="glass-card p-6 rounded-2xl" data-aos="zoom-in" data-aos-delay="100">
+            <div class="w-12 h-12 bg-fuchsia-100 dark:bg-fuchsia-950/50 rounded-xl flex items-center justify-center text-xl mb-4 text-fuchsia-600 dark:text-fuchsia-400 font-bold">
+              ⚙️
+            </div>
+            <h3 class="font-bold text-lg mb-3 text-gray-900 dark:text-white">Frameworks & Libs</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Laravel</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Next.js</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Inertia.js</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Flask</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Tailwind CSS</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Bootstrap</span>
+            </div>
+          </div>
+
+          <!-- AI & Machine Learning -->
+          <div class="glass-card p-6 rounded-2xl" data-aos="zoom-in" data-aos-delay="200">
+            <div class="w-12 h-12 bg-fuchsia-100 dark:bg-fuchsia-950/50 rounded-xl flex items-center justify-center text-xl mb-4 text-fuchsia-600 dark:text-fuchsia-400 font-bold">
+              🧠
+            </div>
+            <h3 class="font-bold text-lg mb-3 text-gray-900 dark:text-white">AI & Deep Learning</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Deep Learning</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">OCR</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">CRNN + CTC</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Recommendation Systems</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Collaborative Filtering</span>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="glass-card p-6 rounded-2xl" data-aos="zoom-in" data-aos-delay="300">
+            <div class="w-12 h-12 bg-fuchsia-100 dark:bg-fuchsia-950/50 rounded-xl flex items-center justify-center text-xl mb-4 text-fuchsia-600 dark:text-fuchsia-400 font-bold">
+              🗄️
+            </div>
+            <h3 class="font-bold text-lg mb-3 text-gray-900 dark:text-white">Databases</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">MySQL</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">PostgreSQL</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Database Design</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Query Optimization</span>
+            </div>
+          </div>
+
+          <!-- Tools & DevOps -->
+          <div class="glass-card p-6 rounded-2xl" data-aos="zoom-in" data-aos-delay="400">
+            <div class="w-12 h-12 bg-fuchsia-100 dark:bg-fuchsia-950/50 rounded-xl flex items-center justify-center text-xl mb-4 text-fuchsia-600 dark:text-fuchsia-400 font-bold">
+              🛠️
+            </div>
+            <h3 class="font-bold text-lg mb-3 text-gray-900 dark:text-white">Tools & DevOps</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Git & GitHub</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Postman</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Linux (Ubuntu/Debian)</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">VPS Deployment</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Figma</span>
+            </div>
+          </div>
+
+          <!-- IoT System -->
+          <div class="glass-card p-6 rounded-2xl" data-aos="zoom-in" data-aos-delay="500">
+            <div class="w-12 h-12 bg-fuchsia-100 dark:bg-fuchsia-950/50 rounded-xl flex items-center justify-center text-xl mb-4 text-fuchsia-600 dark:text-fuchsia-400 font-bold">
+              📡
+            </div>
+            <h3 class="font-bold text-lg mb-3 text-gray-900 dark:text-white">Hardware & IoT</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">IoT Architecture</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">GPS Tracking Systems</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Sensor Integration</span>
+              <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-xs font-semibold">Hardware Prototyping</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <footer class="text-center text-xs py-6 bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400">
-      &copy; 2025 Lexaiko. Made with 💻 by Eko Bagus Susanto
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
+      <h2 class="text-3xl font-extrabold text-center mb-4 text-gray-950 dark:text-white" data-aos="fade-up">
+        🚀 My Projects
+      </h2>
+      <p class="text-center text-gray-500 dark:text-gray-400 mb-10 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        A display of systems, web apps, AI models, and IoT products I've engineered.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-2 mb-12" data-aos="fade-up" data-aos-delay="150">
+        <button onclick="filterProjects(this, 'all')" class="project-tab-btn active-tab px-4 py-2 text-xs md:text-sm font-semibold rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-all duration-300 cursor-pointer">
+          All Projects
+        </button>
+        <button onclick="filterProjects(this, 'webdev')" class="project-tab-btn px-4 py-2 text-xs md:text-sm font-semibold rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-all duration-300 cursor-pointer">
+          Web Dev
+        </button>
+        <button onclick="filterProjects(this, 'aiml')" class="project-tab-btn px-4 py-2 text-xs md:text-sm font-semibold rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-all duration-300 cursor-pointer">
+          AI & Machine Learning
+        </button>
+        <button onclick="filterProjects(this, 'web3')" class="project-tab-btn px-4 py-2 text-xs md:text-sm font-semibold rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-all duration-300 cursor-pointer">
+          Web3
+        </button>
+        <button onclick="filterProjects(this, 'iot')" class="project-tab-btn px-4 py-2 text-xs md:text-sm font-semibold rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-all duration-300 cursor-pointer">
+          IoT
+        </button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div id="projects-grid" class="grid md:grid-cols-2 gap-8">
+        
+        <!-- NotePay (AI & ML, Web Dev) -->
+        <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="aiml webdev" data-aos="zoom-in">
+          <div>
+            <!-- Project Image Carousel -->
+            <div class="relative w-full h-48 mb-4 overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200/50 dark:border-gray-800/50 flex items-center justify-center group/carousel">
+              <div class="carousel-track flex w-full h-full overflow-x-hidden scroll-smooth snap-x snap-mandatory">
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/notepay/image1.png" alt="NotePay Mockup 1" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop';">
+                </div>
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/notepay/image2.png" alt="NotePay Mockup 2" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=600&auto=format&fit=crop';">
+                </div>
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/notepay/image3.png" alt="NotePay Mockup 3" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop';">
+                </div>
+              </div>
+              <!-- Carousel Controls -->
+              <button onclick="scrollCarousel(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity cursor-pointer z-20">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+              </button>
+              <button onclick="scrollCarousel(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity cursor-pointer z-20">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+              </button>
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-fuchsia-100 dark:bg-fuchsia-950/50 text-fuchsia-700 dark:text-fuchsia-300 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">AI / OCR / Next.js</span>
+              <span class="text-xs font-semibold text-gray-400">2026</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">NotePay – Smart Receipt OCR & Expense Tracker</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 font-semibold">AI Engineer & Full Stack Developer</p>
+            <ul class="text-xs text-gray-600 dark:text-gray-400 space-y-2 mb-6 list-disc list-inside">
+              <li>Mengekstrak data transaksi dari struk belanja secara otomatis dengan akurasi tinggi.</li>
+              <li>Mengimplementasikan Deep Learning CRNN + CTC untuk text recognition dan image preprocessing.</li>
+              <li>Membangun modul klasifikasi kategori pengeluaran cerdas berbasis text extraction.</li>
+              <li>Mengintegrasikan modul AI dengan REST API berbasis Next.js dan PostgreSQL.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Python</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">TensorFlow</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Next.js</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">PostgreSQL</span>
+            </div>
+            <div class="flex gap-3">
+              <a href="https://github.com/lexaiko/notepay_capstone_project" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-fuchsia-600 hover:text-fuchsia-700 dark:text-fuchsia-400 dark:hover:text-fuchsia-300 flex items-center gap-1 transition-colors">
+                <span>📂</span> View Code &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- UglyDog.meme (Web3, Web Dev) -->
+        <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="web3 webdev" data-aos="zoom-in" data-aos-delay="100">
+          <div>
+            <!-- Project Image Carousel -->
+            <div class="relative w-full h-48 mb-4 overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200/50 dark:border-gray-800/50 flex items-center justify-center group/carousel">
+              <div class="carousel-track flex w-full h-full overflow-x-hidden scroll-smooth snap-x snap-mandatory">
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/uglydog/image1.png" alt="UglyDog.meme Mockup 1" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1621761191319-c6fb62004040?q=80&w=600&auto=format&fit=crop';">
+                </div>
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/uglydog/image2.png" alt="UglyDog.meme Mockup 2" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=600&auto=format&fit=crop';">
+                </div>
+              </div>
+              <!-- Carousel Controls -->
+              <button onclick="scrollCarousel(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity cursor-pointer z-20">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+              </button>
+              <button onclick="scrollCarousel(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity cursor-pointer z-20">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+              </button>
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-fuchsia-100 dark:bg-fuchsia-950/50 text-fuchsia-700 dark:text-fuchsia-300 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Web3 / Game API</span>
+              <span class="text-xs font-semibold text-gray-400">2025</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">UglyDog.meme – Web3 Mini Game Platform</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 font-semibold">Freelance Backend Developer</p>
+            <ul class="text-xs text-gray-600 dark:text-gray-400 space-y-2 mb-6 list-disc list-inside">
+              <li>Membangun backend REST API performa tinggi untuk game Web3 bertipe click-to-earn.</li>
+              <li>Merancang database leaderboard dan penyimpanan skor yang efisien serta aman.</li>
+              <li>Mengoptimalkan database query dan mengimplementasikan caching sistem respon kilat.</li>
+              <li>Mengintegrasikan fitur reward dengan sistem blockchain platform.</li>
+              <li>Melakukan deployment dan monitoring sistem secara berkala pada VPS Linux Ubuntu.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Laravel</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">MySQL</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Web3 API</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">VPS Linux</span>
+            </div>
+            <div class="flex gap-3">
+              <a href="https://uglydog.meme" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-fuchsia-600 hover:text-fuchsia-700 dark:text-fuchsia-400 dark:hover:text-fuchsia-300 flex items-center gap-1 transition-colors">
+                <span>🌐</span> Visit Site &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Yayasan Matahari Banyuwangi (Web Dev) -->
+        <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="webdev" data-aos="zoom-in" data-aos-delay="200">
+          <div>
+            <!-- Project Image Carousel -->
+            <div class="relative w-full h-48 mb-4 overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200/50 dark:border-gray-800/50 flex items-center justify-center group/carousel">
+              <div class="carousel-track flex w-full h-full overflow-x-hidden scroll-smooth snap-x snap-mandatory">
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/yayasan_matahari/image1.png" alt="Yayasan Matahari Mockup 1" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop';">
+                </div>
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/yayasan_matahari/image2.png" alt="Yayasan Matahari Mockup 2" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=600&auto=format&fit=crop';">
+                </div>
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/yayasan_matahari/image3.png" alt="Yayasan Matahari Mockup 3" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1554224155-6daef9de9cc2?q=80&w=600&auto=format&fit=crop';">
+                </div>
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/yayasan_matahari/image4.png" alt="Yayasan Matahari Mockup 4" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?q=80&w=600&auto=format&fit=crop';">
+                </div>
+              </div>
+              <!-- Carousel Controls -->
+              <button onclick="scrollCarousel(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity cursor-pointer z-20">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+              </button>
+              <button onclick="scrollCarousel(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity cursor-pointer z-20">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+              </button>
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-fuchsia-100 dark:bg-fuchsia-950/50 text-fuchsia-700 dark:text-fuchsia-300 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Financial System / Web Dev</span>
+              <span class="text-xs font-semibold text-gray-400">2025</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Yayasan Matahari – Financial System</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 font-semibold">Freelance Full Stack Developer</p>
+            <ul class="text-xs text-gray-600 dark:text-gray-400 space-y-2 mb-6 list-disc list-inside">
+              <li>Digitalisasi total sistem keuangan dan administrasi yayasan sosial berbasis web.</li>
+              <li>Mengembangkan modul transaksi, manajemen pegawai, dan laporan keuangan komprehensif.</li>
+              <li>Mengimplementasikan fitur ekspor PDF dan dasbor interaktif visualisasi cashflow.</li>
+              <li>Melakukan deployment penuh di server hosting dan melakukan training pengguna.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Laravel</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">MySQL</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Tailwind CSS</span>
+            </div>
+            <div class="flex gap-3">
+              <a href="https://github.com/lexaiko/keuangan-yayasan-matahari" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-fuchsia-600 hover:text-fuchsia-700 dark:text-fuchsia-400 dark:hover:text-fuchsia-300 flex items-center gap-1 transition-colors">
+                <span>📂</span> View Code &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Klinik Al Afiyah (Web Dev) -->
+        <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="webdev" data-aos="zoom-in" data-aos-delay="300">
+          <div>
+            <!-- Project Image Carousel -->
+            <div class="relative w-full h-48 mb-4 overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200/50 dark:border-gray-800/50 flex items-center justify-center group/carousel">
+              <div class="carousel-track flex w-full h-full overflow-x-hidden scroll-smooth snap-x snap-mandatory">
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/klinik_alafiyah/image1.png" alt="Klinik Al Afiyah Mockup 1" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1538108176447-2af0b9096a35?q=80&w=600&auto=format&fit=crop';">
+                </div>
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/klinik_alafiyah/image2.png" alt="Klinik Al Afiyah Mockup 2" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=600&auto=format&fit=crop';">
+                </div>
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/klinik_alafiyah/image3.png" alt="Klinik Al Afiyah Mockup 3" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600&auto=format&fit=crop';">
+                </div>
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/klinik_alafiyah/image4.png" alt="Klinik Al Afiyah Mockup 4" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=600&auto=format&fit=crop';">
+                </div>
+              </div>
+              <!-- Carousel Controls -->
+              <button onclick="scrollCarousel(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity cursor-pointer z-20">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+              </button>
+              <button onclick="scrollCarousel(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity cursor-pointer z-20">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+              </button>
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-fuchsia-100 dark:bg-fuchsia-950/50 text-fuchsia-700 dark:text-fuchsia-300 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Queue System / Web Dev</span>
+              <span class="text-xs font-semibold text-gray-400">2025</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Klinik Al Afiyah Queue Management System</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 font-semibold">Full Stack Developer</p>
+            <ul class="text-xs text-gray-600 dark:text-gray-400 space-y-2 mb-6 list-disc list-inside">
+              <li>Membangun manajemen antrean pelayanan pasien guna menekan waktu tunggu antrean klinik.</li>
+              <li>Mengembangkan fitur registrasi pasien online, visual antrean langsung, dan rekap medis.</li>
+              <li>Menerapkan keamanan otentikasi role-based access control (RBAC) super ketat.</li>
+              <li>Mengintegrasikan REST API komunikasi lancar antar subsistem internal klinik.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Laravel</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">MySQL</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Tailwind CSS</span>
+            </div>
+            <div class="flex gap-3">
+              <a href="https://github.com/lexaiko/manajemen-antrean-klinik-al-afiyah" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-fuchsia-600 hover:text-fuchsia-700 dark:text-fuchsia-400 dark:hover:text-fuchsia-300 flex items-center gap-1 transition-colors">
+                <span>📂</span> View Code &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Celcius Villa Paspan (Web Dev) -->
+        <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="webdev" data-aos="zoom-in" data-aos-delay="400">
+          <div>
+            <!-- Project Image Carousel -->
+            <div class="relative w-full h-48 mb-4 overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200/50 dark:border-gray-800/50 flex items-center justify-center group/carousel">
+              <div class="carousel-track flex w-full h-full overflow-x-hidden scroll-smooth snap-x snap-mandatory">
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/celcius_villa/image1.png" alt="Celcius Villa Paspan Mockup 1" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=600&auto=format&fit=crop';">
+                </div>
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/celcius_villa/image2.png" alt="Celcius Villa Paspan Mockup 2" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=600&auto=format&fit=crop';">
+                </div>
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/celcius_villa/image3.png" alt="Celcius Villa Paspan Mockup 3" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=600&auto=format&fit=crop';">
+                </div>
+              </div>
+              <!-- Carousel Controls -->
+              <button onclick="scrollCarousel(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity cursor-pointer z-20">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+              </button>
+              <button onclick="scrollCarousel(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity cursor-pointer z-20">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+              </button>
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-fuchsia-100 dark:bg-fuchsia-950/50 text-fuchsia-700 dark:text-fuchsia-300 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Booking Web / Web Dev</span>
+              <span class="text-xs font-semibold text-gray-400">2024</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Celcius Villa Paspan Profile & Reservation</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 font-semibold">Freelance Full Stack Developer</p>
+            <ul class="text-xs text-gray-600 dark:text-gray-400 space-y-2 mb-6 list-disc list-inside">
+              <li>Membangun landing page representatif dan formulir pemesanan villa secara instan.</li>
+              <li>Mengembangkan dasbor manajemen konten admin (CMS) galeri, harga, dan review tamu.</li>
+              <li>Melakukan setup server VPS deployment dan konfigurasi domain/SSL agar aman diakses.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Laravel</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">MySQL</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Tailwind CSS</span>
+            </div>
+            <div class="flex gap-3">
+              <a href="https://github.com/lexaiko/celciusvilla" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-fuchsia-600 hover:text-fuchsia-700 dark:text-fuchsia-400 dark:hover:text-fuchsia-300 flex items-center gap-1 transition-colors">
+                <span>📂</span> View Code &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blimbingsari Creative Craft (Web Dev) -->
+        <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="webdev" data-aos="zoom-in" data-aos-delay="500">
+          <div>
+            <!-- Project Image Carousel -->
+            <div class="relative w-full h-48 mb-4 overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200/50 dark:border-gray-800/50 flex items-center justify-center group/carousel">
+              <div class="carousel-track flex w-full h-full overflow-x-hidden scroll-smooth snap-x snap-mandatory">
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/bccrafts/image1.png" alt="Blimbingsari Creative Craft Mockup 1" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=600&auto=format&fit=crop';">
+                </div>
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/bccrafts/image2.png" alt="Blimbingsari Creative Craft Mockup 2" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=600&auto=format&fit=crop';">
+                </div>
+                <div class="w-full h-full shrink-0 snap-start">
+                  <img src="image/bccrafts/image3.png" alt="Blimbingsari Creative Craft Mockup 3" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?q=80&w=600&auto=format&fit=crop';">
+                </div>
+              </div>
+              <!-- Carousel Controls -->
+              <button onclick="scrollCarousel(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity cursor-pointer z-20">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+              </button>
+              <button onclick="scrollCarousel(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity cursor-pointer z-20">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+              </button>
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-fuchsia-100 dark:bg-fuchsia-950/50 text-fuchsia-700 dark:text-fuchsia-300 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Catalog / Community Service</span>
+              <span class="text-xs font-semibold text-gray-400">2024</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Blimbingsari Creative Craft Portal</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 font-semibold">Full Stack Developer</p>
+            <ul class="text-xs text-gray-600 dark:text-gray-400 space-y-2 mb-6 list-disc list-inside">
+              <li>Membangun platform e-katalog digital produk kerajinan UMKM desa wisata Blimbingsari.</li>
+              <li>Mengembangkan dasbor CRUD admin untuk mengelola katalog, kategori, and artikel berita.</li>
+              <li>Menerapkan fitur sistem multibahasa (ID/EN) dan optimasi penataan aset gambar.</li>
+              <li>Berkontribusi aktif dalam meningkatkan jangkauan pemasaran produk lokal.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Laravel</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">MySQL</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Tailwind CSS</span>
+            </div>
+            <div class="flex gap-3 flex-wrap items-center gap-y-1">
+              <a href="https://bccrafts.com" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-fuchsia-600 hover:text-fuchsia-700 dark:text-fuchsia-400 dark:hover:text-fuchsia-300 flex items-center gap-1 transition-colors">
+                <span>🌐</span> Visit Site
+              </a>
+              <span class="text-gray-300 dark:text-gray-700 text-xs">|</span>
+              <a href="https://github.com/lexaiko/blimbingsari-creative-craft-pengabdian-project" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-fuchsia-600 hover:text-fuchsia-700 dark:text-fuchsia-400 dark:hover:text-fuchsia-300 flex items-center gap-1 transition-colors">
+                <span>📂</span> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Magic Stick (IoT) -->
+        <div class="project-card glass-card p-6 rounded-2xl flex flex-col justify-between" data-category="iot" data-aos="zoom-in" data-aos-delay="600">
+          <div>
+            <!-- Project Image Frame (Single Image, no carousel arrows needed) -->
+            <div class="relative w-full h-48 mb-4 overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200/50 dark:border-gray-800/50 flex items-center justify-center group/carousel">
+              <img src="image/stick_magic/image1.png" alt="Magic Stick Mockup" class="w-full h-full object-cover opacity-95 group-hover/carousel:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1517055720413-77a2834dd1a6?q=80&w=600&auto=format&fit=crop';">
+            </div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="bg-fuchsia-100 dark:bg-fuchsia-950/50 text-fuchsia-700 dark:text-fuchsia-300 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">IoT / Hardware / Award</span>
+              <span class="text-xs font-semibold text-gray-400">2024</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Magic Stick – IoT Assistive Navigation Device</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 font-semibold">IoT Hardware Developer</p>
+            <ul class="text-xs text-gray-600 dark:text-gray-400 space-y-2 mb-6 list-disc list-inside">
+              <li>Merancang prototipe tongkat bantu navigasi penyandang disabilitas berbasis IoT.</li>
+              <li>Mengintegrasikan sensor ultrasonik pendeteksi rintangan dan modul suara (buzzer).</li>
+              <li>Membangun fitur GPS Tracking untuk pemantauan koordinat pengguna secara real-time.</li>
+              <li>Meraih Juara Harapan 1 pada ajang bergengsi Commit Competition 2024 bidang IoT.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">IoT</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">GPS Tracking</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">Ultrasonic Sensor</span>
+              <span class="px-2 py-0.5 text-[10px] rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">C++</span>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-xs font-semibold text-fuchsia-600 dark:text-fuchsia-450 flex items-center gap-1 font-bold">
+                🏆 Juara Harapan 1 (Commit 2024)
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="py-24 bg-gray-150/30 dark:bg-gray-900/20 border-t border-gray-100 dark:border-gray-900/50">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-extrabold text-center mb-16 text-gray-950 dark:text-white" data-aos="fade-up">
+          💼 Journey & Experience
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Organizational Experience -->
+          <div data-aos="fade-right">
+            <h3 class="text-xl font-bold mb-8 text-gray-900 dark:text-white flex items-center gap-2">
+              <span>👥</span> Organizational Roles
+            </h3>
+            <ol class="relative border-s border-gray-200 dark:border-gray-800 space-y-8">
+              
+              <!-- Role 4 -->
+              <li class="ms-6">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-fuchsia-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-950 dark:bg-fuchsia-900/50 text-fuchsia-600 dark:text-fuchsia-400">
+                  📍
+                </span>
+                <h4 class="flex items-center mb-1 text-sm font-semibold text-gray-900 dark:text-white">
+                  Staff Research & Technology
+                </h4>
+                <time class="block mb-2 text-xs font-normal leading-none text-gray-400 dark:text-gray-500">
+                  HMJ Bisnis dan Informatika (2025 - 2026)
+                </time>
+                <p class="text-xs font-normal text-gray-500 dark:text-gray-400">
+                  Fokus pada pengembangan inovasi mahasiswa di lingkup jurusan teknologi informasi dan rekayasa.
+                </p>
+              </li>
+
+              <!-- Role 3 -->
+              <li class="ms-6">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-fuchsia-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-950 dark:bg-fuchsia-900/50 text-fuchsia-600 dark:text-fuchsia-400">
+                  📍
+                </span>
+                <h4 class="flex items-center mb-1 text-sm font-semibold text-gray-900 dark:text-white">
+                  Secretary of Student Welfare
+                </h4>
+                <time class="block mb-2 text-xs font-normal leading-none text-gray-400 dark:text-gray-500">
+                  BEM Politeknik Negeri Banyuwangi (2024 - 2025)
+                </time>
+                <p class="text-xs font-normal text-gray-500 dark:text-gray-400">
+                  Mengelola administrasi kesejahteraan mahasiswa dan berkoordinasi langsung dengan pimpinan kampus.
+                </p>
+              </li>
+
+              <!-- Role 2 -->
+              <li class="ms-6">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-fuchsia-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-950 dark:bg-fuchsia-900/50 text-fuchsia-600 dark:text-fuchsia-400">
+                  📍
+                </span>
+                <h4 class="flex items-center mb-1 text-sm font-semibold text-gray-900 dark:text-white">
+                  Staff Science & Technology
+                </h4>
+                <time class="block mb-2 text-xs font-normal leading-none text-gray-400 dark:text-gray-500">
+                  HMJ Bisnis dan Informatika (2024)
+                </time>
+                <p class="text-xs font-normal text-gray-500 dark:text-gray-400">
+                  Menginisiasi program kerja sains praktis dan pelatihan coding bagi mahasiswa baru.
+                </p>
+              </li>
+
+              <!-- Role 1 -->
+              <li class="ms-6">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-fuchsia-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-950 dark:bg-fuchsia-900/50 text-fuchsia-600 dark:text-fuchsia-400">
+                  📍
+                </span>
+                <h4 class="flex items-center mb-1 text-sm font-semibold text-gray-900 dark:text-white">
+                  Staff Research & Innovation
+                </h4>
+                <time class="block mb-2 text-xs font-normal leading-none text-gray-400 dark:text-gray-500">
+                  BEM Politeknik Negeri Banyuwangi (2023)
+                </time>
+                <p class="text-xs font-normal text-gray-500 dark:text-gray-400">
+                  Melakukan riset internal organisasi untuk memecahkan masalah kelembagaan di kampus.
+                </p>
+              </li>
+
+            </</ol>
+          </div>
+
+          <!-- Education -->
+          <div data-aos="fade-left">
+            <h3 class="text-xl font-bold mb-8 text-gray-900 dark:text-white flex items-center gap-2">
+              <span>🎓</span> Education
+            </h3>
+            <ol class="relative border-s border-gray-200 dark:border-gray-800 space-y-8">
+              
+              <!-- Poliwangi -->
+              <li class="ms-6">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-fuchsia-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-950 dark:bg-fuchsia-900/50 text-fuchsia-600 dark:text-fuchsia-400">
+                  🏫
+                </span>
+                <h4 class="flex items-center mb-1 text-sm font-semibold text-gray-900 dark:text-white">
+                  Politeknik Negeri Banyuwangi
+                </h4>
+                <span class="block mb-1 text-xs font-bold text-fuchsia-600 dark:text-fuchsia-400">
+                  D-IV Teknologi Rekayasa Perangkat Lunak
+                </span>
+                <time class="block mb-3 text-xs font-normal leading-none text-gray-400 dark:text-gray-500">
+                  2023 - Sekarang (Semester 6)
+                </time>
+                <p class="text-xs font-normal text-gray-500 dark:text-gray-400">
+                  Mempelajari Rekayasa Perangkat Lunak tingkat lanjut, Database Design, Sistem Terdistribusi, Machine Learning, dan Manajemen Proyek IT.
+                </p>
+              </li>
+
+              <!-- SMK -->
+              <li class="ms-6">
+                <span class="absolute flex items-center justify-center w-6 h-6 bg-fuchsia-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-950 dark:bg-fuchsia-900/50 text-fuchsia-600 dark:text-fuchsia-400">
+                  ⚡
+                </span>
+                <h4 class="flex items-center mb-1 text-sm font-semibold text-gray-900 dark:text-white">
+                  SMK Muhammadiyah 2 Genteng
+                </h4>
+                <span class="block mb-1 text-xs font-bold text-fuchsia-600 dark:text-fuchsia-400">
+                  Teknik Elektronika Industri
+                </span>
+                <time class="block mb-3 text-xs font-normal leading-none text-gray-400 dark:text-gray-500">
+                  2020 - 2023
+                </time>
+                <p class="text-xs font-normal text-gray-500 dark:text-gray-400">
+                  Mendapatkan fondasi kelistrikan kuat, sistem mikrokontroler, rangkaian elektronika digital, dan perakitan komponen IoT.
+                </p>
+              </li>
+
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="py-24 bg-gray-50 dark:bg-gray-950 px-6 border-t border-gray-100 dark:border-gray-900/50">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-extrabold mb-10 text-gray-950 dark:text-white" data-aos="fade-up">
+          🏆 Awards & Competitions
+        </h2>
+        <div class="glass-card p-8 rounded-3xl border border-fuchsia-500/20 max-w-xl mx-auto flex flex-col items-center justify-center" data-aos="zoom-in">
+          <div class="w-16 h-16 bg-fuchsia-100 dark:bg-fuchsia-950/60 rounded-full flex items-center justify-center text-3xl mb-4 animate-bounce">
+            🥇
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">1st Runner-Up (Juara Harapan 1)</h3>
+          <p class="text-fuchsia-600 dark:text-fuchsia-400 font-bold text-sm mb-4">Commit Competition 2024 — IoT Category</p>
+          <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-normal">
+            Berhasil meraih penghargaan Juara Harapan 1 melalui proyek inovatif <strong>"Magic Stick"</strong>, yaitu tongkat pandu cerdas berbasis IoT yang dirancang khusus untuk mempermudah navigasi aman tunanetra.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacts" class="py-24 px-6 text-center max-w-4xl mx-auto border-t border-gray-100 dark:border-gray-900/50">
+      <h2 class="text-3xl font-extrabold mb-4 text-gray-950 dark:text-white" data-aos="fade-up">
+        📬 Let's Connect
+      </h2>
+      <p class="text-gray-500 dark:text-gray-400 mb-12 max-w-lg mx-auto font-medium" data-aos="fade-up" data-aos-delay="100">
+        Saya selalu terbuka untuk berdiskusi terkait lowongan magang (internship), proyek kolaborasi full-stack web development, atau implementasi sistem kecerdasan buatan (AI).
+      </p>
+      
+      <div class="grid sm:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="200">
+        <a href="mailto:ekosusantobagussusanto@gmail.com" class="glass-card p-6 rounded-2xl flex flex-col items-center hover:border-fuchsia-500 transition-colors">
+          <span class="text-2xl mb-2">✉️</span>
+          <span class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase">Email</span>
+          <span class="text-sm font-bold text-gray-800 dark:text-gray-200 mt-2 hover:underline truncate w-full">ekosusantobagussusanto@gmail.com</span>
+        </a>
+        <a href="https://linkedin.com/in/eko-bagus-susanto" target="_blank" rel="noopener noreferrer" class="glass-card p-6 rounded-2xl flex flex-col items-center hover:border-fuchsia-500 transition-colors">
+          <span class="text-2xl mb-2">🔗</span>
+          <span class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase">LinkedIn</span>
+          <span class="text-sm font-bold text-gray-800 dark:text-gray-200 mt-2 hover:underline">eko-bagus-susanto</span>
+        </a>
+        <a href="https://github.com/lexaiko" target="_blank" rel="noopener noreferrer" class="glass-card p-6 rounded-2xl flex flex-col items-center hover:border-fuchsia-500 transition-colors">
+          <span class="text-2xl mb-2">💻</span>
+          <span class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase">GitHub</span>
+          <span class="text-sm font-bold text-gray-800 dark:text-gray-200 mt-2 hover:underline">lexaiko</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-xs py-8 bg-white dark:bg-gray-950 text-gray-500 dark:text-gray-500 border-t border-gray-150 dark:border-gray-900/50">
+      <div class="max-w-screen-xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p>&copy; 2026 Lexaiko. All Rights Reserved.</p>
+        <p class="flex items-center gap-1">
+          Made with 💻 by <strong class="text-fuchsia-600 dark:text-fuchsia-400">Eko Bagus Susanto</strong>
+        </p>
+      </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <a href="#" class="fixed bottom-4 right-4 z-40 focus:outline-none text-white bg-fuchsia-600 hover:bg-fuchsia-700 font-medium rounded-lg text-sm p-3 transition-transform hover:scale-110 shadow-lg shadow-fuchsia-500/25">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up">
+        <path d="m18 15-6-6-6 6"/>
+      </svg>
+    </a>
+
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
@@ -200,45 +938,132 @@
         easing: 'ease-in-out'
       });
     </script>
+    
     <script>
-  const texts = [
-    "Hi, I'm Lexaiko | Eko Bagus Susanto ",
-    "Welcome to my Portfolio!",
-    "I love coding smart solutions.",
-    "AI + IoT = Future!"
-  ];
+      // Typing Animation
+      const texts = [
+        "Hi, I'm Eko Bagus Susanto",
+        "AI Engineer & Full Stack Developer",
+        "6th Semester TRPL Student",
+        "Building Solutions with AI & IoT"
+      ];
 
-  let i = 0, j = 0, currentText = "", isDeleting = false;
-  const typingSpeed = 100;
-  const deletingSpeed = 40;
-  const target = document.getElementById("typing");
+      let i = 0, j = 0;
+      let isDeleting = false;
+      const typingSpeed = 100;
+      const deletingSpeed = 40;
+      const target = document.getElementById("typing");
 
-  function type() {
-    if (i < texts.length) {
-      if (!isDeleting && j <= texts[i].length) {
-        currentText = texts[i].substring(0, j++);
-      } else if (isDeleting && j >= 0) {
-        currentText = texts[i].substring(0, j--);
+      function type() {
+        const currentFullText = texts[i];
+        
+        if (isDeleting) {
+          j--;
+        } else {
+          j++;
+        }
+        
+        target.textContent = currentFullText.substring(0, j);
+        
+        let nextDelay = isDeleting ? deletingSpeed : typingSpeed;
+        
+        if (!isDeleting && j === currentFullText.length) {
+          isDeleting = true;
+          nextDelay = 2000;
+        } else if (isDeleting && j === 0) {
+          isDeleting = false;
+          i = (i + 1) % texts.length;
+          nextDelay = 500;
+        }
+        
+        setTimeout(type, nextDelay);
       }
 
-      target.textContent = currentText;
+      setTimeout(type, 300);
+    </script>
 
-      if (j === texts[i].length) {
-        isDeleting = true;
-        setTimeout(type, 1500);
-      } else if (isDeleting && j === 0) {
-        isDeleting = false;
-        i = (i + 1) % texts.length;
-        setTimeout(type, 300);
+    <script>
+      // Dark Mode Toggle Logic
+      var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+      var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+      // Change the icons inside the button based on previous settings
+      if (
+        localStorage.getItem('color-theme') === 'dark' ||
+        (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        themeToggleLightIcon.classList.remove('hidden');
       } else {
-        setTimeout(type, isDeleting ? deletingSpeed : typingSpeed);
+        themeToggleDarkIcon.classList.remove('hidden');
       }
-    }
-  }
 
-  // Tambahkan delay supaya Google bisa baca fallback sebelum diubah JS
-  setTimeout(type, 300);
-</script>
-<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+      var themeToggleBtn = document.getElementById('theme-toggle');
+
+      themeToggleBtn.addEventListener('click', function() {
+        // toggle icons inside button
+        themeToggleDarkIcon.classList.toggle('hidden');
+        themeToggleLightIcon.classList.toggle('hidden');
+
+        // if set via local storage previously
+        if (localStorage.getItem('color-theme')) {
+          if (localStorage.getItem('color-theme') === 'light') {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+          }
+        // if not set via local storage previously
+        } else {
+          if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+          } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+          }
+        }
+      });
+    </script>
+
+    <script>
+      // Project Filtering Logic
+      function filterProjects(btn, category) {
+        const cards = document.querySelectorAll('.project-card');
+        const buttons = document.querySelectorAll('.project-tab-btn');
+        
+        // Update active class on filter buttons
+        buttons.forEach(b => {
+          b.classList.remove('active-tab');
+        });
+        
+        btn.classList.add('active-tab');
+
+        // Toggle card visibility
+        cards.forEach(card => {
+          const cardCategories = card.getAttribute('data-category').split(' ');
+          if (category === 'all' || cardCategories.includes(category)) {
+            card.classList.remove('hidden');
+            // Retrigger AOS animation if visible
+            card.setAttribute('data-aos', 'zoom-in');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        // Recalculate offsets for AOS since the page layout height has changed
+        setTimeout(() => {
+          AOS.refresh();
+        }, 50);
+      }
+
+      // Project Carousel Scroll Logic
+      function scrollCarousel(button, direction) {
+        const track = button.parentElement.querySelector('.carousel-track');
+        const slideWidth = track.clientWidth;
+        track.scrollBy({ left: direction * slideWidth, behavior: 'smooth' });
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   </body>
 </html>
